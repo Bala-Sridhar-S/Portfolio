@@ -1,0 +1,294 @@
+:root{
+    --clr-primary: #2f3d4f;
+    --clr-secondary: #da5640;
+    --clr-tertiary: rgb(68, 84, 128);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: sans-serif;
+    min-width: 300px;
+}
+
+/* Nav bar */
+.navbar{
+    width: 100%;
+    background-color: var(--clr-secondary);
+    position: fixed;
+}
+
+.navbar .container{
+    max-width: 1660px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar .container ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .container h1{
+    color: white;
+    text-align: center;
+    padding: 24px 30px;
+    font-weight: 200;
+}
+
+.navbar .container a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.navbar .container ul li a:hover,
+.navbar .container ul li a:focus{
+    color:white;
+    background-color: var(--clr-primary);
+}
+
+/* Welcome Section */
+.welcome-section{
+    background-color: var(--clr-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.title{
+    text-align: center;
+    font-size: 4rem;
+    color:white;
+    margin-top: 100px;
+    font-weight: 600;
+}
+
+.description{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2rem;
+    font-style: italic;
+    color:var(--clr-secondary);
+    font-weight: 100;
+}
+
+.btn{
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--clr-secondary);
+    font-size: 1.4rem;
+    margin: 30px auto;
+    padding: 0.6em 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(0.95);
+}
+
+/* Projects Section */
+.projects{
+    background-color: var(--clr-tertiary);
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.text{
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    padding: 0 10px;
+    padding-top: 5rem;
+}
+
+.line{
+    height: 1px;
+    background-color: white;
+    color: white;
+    margin-top:14px;
+    width: 30%;
+    margin: 4rem auto;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 94%;
+    max-width: 1660px;
+}
+
+.flex a{
+    text-decoration: none;
+}
+
+.card{
+    margin:24px 14px;
+    padding-bottom: 22px;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+}
+
+img{
+    width: 400px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.img-des{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease-out;
+}
+
+span{
+    margin-top: -2px;
+    color: #fff;
+    transition: color 0.3s ease-out;
+}
+
+.card:hover span,
+.card:hover p{
+    color: var(--clr-secondary);
+}
+
+/* Contact Info */
+.contact{
+    background-color: var(--clr-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+
+.contact .l1{
+    font-size: 4rem;
+    margin-top: 100px;
+}
+
+.contact .l2{
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.contact .links{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .links a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    padding: 40px;
+}
+
+.contact .links i{
+    padding:10px;   
+}
+
+.link{
+    transition: transform 0.3s ease-out;
+}
+
+.link:hover{
+    transform: translateY(4px);
+}
+
+/* Media Queries */
+/* Screen sizes less than 768px */
+@media only screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+
+    .navbar .container ul{
+        justify-content: center;
+    }
+
+    .title{
+        margin-top: 20px;
+    }
+}
+
+/* Screen sizes less than 500px */
+@media only screen and (max-width: 500px){
+    html{
+        font-size: 12px;
+    }
+
+    .welcome-section{
+        padding: 20px;
+    }
+
+    .welcome-section h1{
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .welcome-section p{
+        font-size: 1.4rem;
+    }
+
+    .btn{
+        margin-top: 4rem;
+    }
+
+    .contact .links{
+        flex-direction: column;
+    }
+
+    .contact .links a{
+        padding: 20px 40px;
+    }
+
+    .navbar a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 24px 20px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .card img{
+        width: 100%;
+    }
+}
