@@ -14,3 +14,4 @@ My Portfolio
    - Flex
    - Grid
    - Media Queries
+3. JavaScript
