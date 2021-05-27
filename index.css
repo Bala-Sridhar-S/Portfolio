@@ -1,6 +1,6 @@
 :root{
     --clr-primary: #2f3d4f;
-    --clr-secondary: #da5640;
+    --clr-secondary: #f36147;
     --clr-tertiary: rgb(68, 84, 128);
 }
 
@@ -86,7 +86,7 @@ html{
     font-size: 2rem;
     font-style: italic;
     color:var(--clr-secondary);
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .btn{
@@ -118,13 +118,45 @@ html{
     padding-top: 5rem;
 }
 
+.categories{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 1rem auto 0;
+    color: #fff;
+}
+
+.categories li{
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.categories li:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.categories li.active{
+    border-bottom: 2px solid #fff;
+}
+
+.categories li i{
+    font-size: 1.2rem;
+}
+
 .line{
     height: 1px;
     background-color: white;
     color: white;
     margin-top:14px;
     width: 30%;
-    margin: 4rem auto;
+    margin: 2rem auto;
 }
 
 .flex{
@@ -264,6 +296,14 @@ span{
 
     .btn{
         margin-top: 4rem;
+    }
+
+    .categories{
+        flex-wrap: wrap;
+    }
+
+    .categories li{
+        gap: 6px;
     }
 
     .contact .links{
