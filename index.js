@@ -70,6 +70,12 @@ const projects = [
         img: '12.png',
         link: 'https://bala-pizza-project.herokuapp.com/index.php',
         lang: 'PHP'
+    },
+    {
+        title: 'Realtime Chat App PHP',
+        img: '13.png',
+        link: 'https://bala-chat-app.herokuapp.com/',
+        lang: 'PHP'
     }
 ]
 
